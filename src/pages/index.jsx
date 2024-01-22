@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styled from "styled-components";
-import arrayPosts from "./api/array-posts";
 import ListaPosts from "@/components/ListasPosts";
 
 export default function Home() {
@@ -16,7 +15,7 @@ export default function Home() {
       </Head>
       <StyledHome>
         <h2>Pet Notícias</h2>
-        <ListaPosts posts={arrayPosts} />
+        <ListaPosts posts={[{ id: 1, titulo: "teste", subtitulo: "Teste" }]} />
       </StyledHome>
     </>
   );
