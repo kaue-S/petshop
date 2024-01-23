@@ -55,6 +55,14 @@
       "subtitulo": "A alimentação da tartaruga é simples e fácil de encontrar",
       "descricao": "A dieta deve contar com a ingestão de ração, frutas e vegetais como cenouras, maças e mamão, além de feijão verde e espinafre. Outro complemento essencial para a manutenção da proteína é a ingestão de tenébrios vivos ou desidratados. O normal é que um animal jovem coma mais carne, mas passe a preferir frutas e legumes quando for ficando idoso. A alimentação deve ser composta por aproximadamente 80% a 90% de legumes e flores e somente 10% a 20% de frutas.",
       "categoria": "bem-estar"
+    },
+
+    {
+      "id": 9,
+      "titulo": "Bolt",
+      "subtitulo": "O super-cão",
+      "descricao": "Bolt é um cachorro que estrela uma série de TV, na qual possui superpoderes. Entretanto, Bolt não sabe que o mundo que o cerca é falso, acreditando que realmente possui dons especiais. Quando, nas gravações de um dos episódios, Penny é sequestrada pelo Dr. Calico, o vilão da série.",
+      "categoria": "filmes"
     }
   ]
 }
