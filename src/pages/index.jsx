@@ -41,7 +41,7 @@ export default function Home({ posts, categorias }) {
   // const [categoria, setCategoria] = useState(null);
 
   const filtrar = (event) => {
-    const categoriaEscolhida = event.currentTarget.innerText;
+    const categoriaEscolhida = event.currentTarget.textContent;
 
     const novaListaDePosts = posts.filter(
       (post) => post.categoria === categoriaEscolhida
@@ -90,6 +90,7 @@ const StyledCategorias = styled.div`
     color: #f7f7f7;
     padding: 0.5rem;
     border-radius: var(--borda-arredondada);
+    text-transform: capitalize;
 
     &:hover,
     &focus {
