@@ -52,8 +52,8 @@ export default function Home({ posts, categorias }) {
       <StyledHome>
         <h2>Pet Notícias</h2>
         <div>
-          {categorias.map((categoria) => {
-            return <button>{categoria}</button>;
+          {categorias.map((categoria, indice) => {
+            return <button key={indice}>{categoria}</button>;
           })}
         </div>
         <ListaPosts posts={listaDePosts} />
