@@ -63,6 +63,13 @@
       "subtitulo": "O super-cão",
       "descricao": "Bolt é um cachorro que estrela uma série de TV, na qual possui superpoderes. Entretanto, Bolt não sabe que o mundo que o cerca é falso, acreditando que realmente possui dons especiais. Quando, nas gravações de um dos episódios, Penny é sequestrada pelo Dr. Calico, o vilão da série.",
       "categoria": "filmes"
+    },
+    {
+      "id": 10,
+      "titulo": "Bora estudas vagabundo!",
+      "subtitulo": "Sonão vai passar fome",
+      "descricao": "Tá jogando muito",
+      "categoria": "comportamento"
     }
   ]
 }
