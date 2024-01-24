@@ -38,6 +38,17 @@ export async function getStaticProps() {
 export default function Home({ posts, categorias }) {
   console.log(categorias);
   const [listaDePosts, setListaDePosts] = useState(posts);
+  // const [categoria, setCategoria] = useState(null);
+
+  const filtrar = (event) => {
+    const categoriaEscolhida = event.currentTarget.innerText;
+
+    const novaListaDePosts = posts.filter(
+      (post) => post.categoria === categoriaEscolhida
+    );
+
+    setListaDePosts(novaListaDePosts);
+  };
 
   return (
     <>
@@ -51,34 +62,45 @@ export default function Home({ posts, categorias }) {
       </Head>
       <StyledHome>
         <h2>Pet Notícias</h2>
-        <div>
+        <StyledCategorias>
           {categorias.map((categoria, indice) => {
-            return <button key={indice}>{categoria}</button>;
+            return (
+              <button onClick={filtrar} key={indice}>
+                {categoria}
+              </button>
+            );
           })}
-        </div>
+        </StyledCategorias>
         <ListaPosts posts={listaDePosts} />
       </StyledHome>
     </>
   );
 }
 
+const StyledCategorias = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+
+  button {
+    border: none;
+    background-color: var(--cor-secundaria-fundo);
+    color: #f7f7f7;
+    padding: 0.5rem;
+    border-radius: var(--borda-arredondada);
+
+    &:hover,
+    &focus {
+      background-color: var(--cor-secundaria-fundo-hover);
+      cursor: pointer;
+    }
+  }
+`;
+
 const StyledHome = styled.section`
   h2::before {
     content: "📰 ";
-  }
-
-  button {
-    background-color: #5454a3;
-    padding: 8px;
-    border-radius: 5px;
-    border-style: none;
-    justify-content: center;
-    margin-left: 15px;
-    margin-bottom: 10px;
-    color: white;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 `;
