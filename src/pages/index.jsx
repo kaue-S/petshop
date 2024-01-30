@@ -7,8 +7,9 @@ import serverApi from "./api/server";
 
 export async function getStaticProps() {
   try {
-    const resposta = await fetch(`${serverApi}/posts`);
+    const resposta = await fetch(`${serverApi}/posts.json`);
     const dados = await resposta.json();
+    console.log(dados);
 
     if (!resposta.ok) {
       throw new Error(`Erro: ${resposta.status} - ${resposta.statusText}`);
