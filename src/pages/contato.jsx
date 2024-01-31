@@ -48,6 +48,7 @@ export default function Contato() {
 
         <Container>
           <form
+            autoComplete="off"
             action=""
             method="post"
             onSubmit={handleSubmit((dados) => {
@@ -56,21 +57,40 @@ export default function Contato() {
           >
             <div>
               <label htmlFor="nome">Nome: </label>
-              <input {...register("nome")} type="text" name="nome" id="nome" />
+              <input
+                {...register("nome", { required: true })}
+                type="text"
+                name="nome"
+                id="nome"
+              />
             </div>
+
+            {errors.nome?.type == "required" && (
+              <p style={{ color: "red", textAlign: "center" }}>
+                Você deve digitar o nome
+              </p>
+            )}
+
             <div>
               <label htmlFor="email">E-mail: </label>
               <input
-                {...register("email")}
+                {...register("email", { required: true })}
                 type="email"
                 name="email"
                 id="email"
               />
             </div>
+
+            {errors.email?.type == "required" && (
+              <p style={{ color: "red", textAlign: "center" }}>
+                Você deve digitar o email
+              </p>
+            )}
+
             <div>
               <label htmlFor="mensagem">Mensagem:</label>
               <textarea
-                {...register("mensagem")}
+                {...register("mensagem", { required: true, minLength: 20 })}
                 maxLength={500}
                 name="mensagem"
                 id="mensagem"
@@ -78,6 +98,19 @@ export default function Contato() {
                 rows="8"
               ></textarea>
             </div>
+
+            {errors.mensagem?.type == "required" && (
+              <p style={{ color: "red", textAlign: "center" }}>
+                Você deve digitar uma mensagem
+              </p>
+            )}
+
+            {errors.mensagem?.type == "minLength" && (
+              <p style={{ color: "red", textAlign: "center" }}>
+                Escreva pelo menos 20 caracteres
+              </p>
+            )}
+
             <div>
               <button type="submit">Enviar mensagem</button>
             </div>
