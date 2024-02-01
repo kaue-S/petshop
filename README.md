@@ -4,6 +4,18 @@
 
 PWA significa Progressive Web Application (Aplicativo Web Progressivo). Trata-se de uma abordagem para desenvolvimento de aplicativos web que visa combinar características de sites e aplicativos móveis. As PWAs são construídas com tecnologias web tradicionais (HTML5, CSS e JavaScript) e oferecem uma experiência semelhante à de aplicativos nativos, podendo até mesmo serem instaladas no dispositivo móvel.
 
+### Requisitos para uma PWA
+
+1 - Arquivo de manifesto
+Arquivo chamado manifest.json com informações gerais sobre o aplicativo: nome, descrição, ícones, cores etc.
+
+2 - No caso do Next.js, este arquivo deve ser colocado na pasta public e adicionado via meta tag na página \_document.js.
+
+3 - Criar/Configurar um Service Worker (JavaScript)
+Service Worker é um script que o navegador executa em segundo plano, de forma independente da interface ou de interações do usuário. Ele permite usar recursos que transformam a aplicação em PWA, como instalação/desinstalação, cache offline, notificações etc. No caso do Next.js, o Service Worker será criado/configurado automaticamente com o auxílio da lib next-pwa e com ajustes no next.config.js.
+
+Publicação em servidor com suporte à HTTPS
+
 ## Branch 19-migração-api-fake-para-firebase-json
 
 ### Firebase: https://firebase.google.com/
