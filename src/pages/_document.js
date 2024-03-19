@@ -17,7 +17,7 @@ export default function Document() {
           type="image/png"
           sizes="256x256"
         />
-        <meta name="author" content="Tiago B. dos Santos" />
+        <meta name="author" content="Kauê Evangelista" />
       </Head>
       <body>
         <Main />
